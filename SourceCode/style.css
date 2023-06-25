@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body{
+    background-color: black;
+    overflow: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul{
+    margin-top: 25px;
+    font-family: 'Ubuntu', sans-serif;
+    list-style: none;
+    display: flex;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: black;
+    color: white;
+}
+
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+.brand img{
+    width: 45px;
+    padding: 0 8px;
+}
+
+.container {
+    background-color: #181818;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    height: 75vh;
+    box-sizing: border-box; /* Update the box-sizing property */
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: auto;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    width: 95vw;
+    border-radius: 12px;
+    padding: 35px;
+}
+
+  .container::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
+  }
+  
+  .container::-webkit-scrollbar-thumb {
+    background-color:white;
+    border-radius: 1px;
+  }
+  
+  .container::-webkit-scrollbar-track {
+    background-color: #181818;
+
+  }
+
+/* Bottom Implementation................................................................................... */
+.bottom{
+    position: fixed;
+    bottom: 0;
+    height: 13vh;
+    margin-top: 10px;
+    background-color: black;
+    width: 100vw;
+    color: white;
+    display: flex;
+    padding: 5px 70px 0px 40px;
+    font-family: 'Varela Round', sans-serif;
+    justify-content: space-between;
+    align-items: center; 
+    gap: 20px;
+}
+
+
+.songDetail{
+    width: 20vw;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#btmImg{
+    height: 55px;
+    width: 55px;
+    border-radius: 8px;
+}
+
+.songControl{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    font-weight: w800;
+    gap: 15px;
+}
+
+.songRange{
+    display: flex;
+    font-family: 'Roboto';
+    font-size: 12px;
+    align-items: center;
+    gap: 10px;
+}
+
+.songData{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 5px;
+}
+
+#masterSongName{
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#masterSongSinger{
+    font-size: 10px;
+}
+
+.songInfo{
+    width: 20vw;
+}
+
+.songInfo img{
+    opacity: 1;
+    transition: opacity 0.4s ease-in;
+}
+
+#myProgressBar{
+    width: 40vw; 
+    height: 4px;
+    cursor: pointer;
+}
+.icons{
+    display: flex;
+    gap : 20px;
+}
+.icons i{
+    cursor: pointer;
+}
+
+
+.dots-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+  
+.dot {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: #40cde8;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+  
+.dot:last-child {
+    margin-right: 0;
+}
+  
+.dot:nth-child(1) {
+    animation-delay: -0.3s;
+}
+  
+.dot:nth-child(2) {
+    animation-delay: -0.1s;
+}
+  
+.dot:nth-child(3) {
+    animation-delay: 0.1s;
+}
+  
+@keyframes pulse {
+    0% {
+        transform: scale(0.6);
+        background-color: #40cde8;
+        box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+    }
+    
+    50% {
+        transform: scale(0.7);
+        background-color: #40cde8;
+        box-shadow: 0 0 0 10px rgba(178, 212, 252, 0);
+    }
+    
+    100% {
+        transform: scale(0.6);
+        background-color: #40cde8;
+        box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+    }
+}
+
+
+/* Song Container Implementation................................................................................... */
+.songItemContainer{
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-bottom: 30px;
+    justify-content: space-between;
+}
+
+.songItem {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 180px;
+    height: 250px;
+    padding: 15px;
+    background-color: #151414;
+    border-radius: 4px;
+    box-shadow: 0px 0px 8px #0e0e0e;
+    transition: transform 3s ease;
+}
+
+.songItem:hover {
+    transform: scale(1);
+    border-color: #40cde8;
+    box-shadow: 0.1rem 0.1rem 0.8rem #40cde8;
+  }
+  
+.songItem img {
+    height: 180px;
+    width: 180px;
+    border-radius: 6px;
+}
+
+.songItem .songNS {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 5px;
+    width: 170px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+  
+.songItem .songNS .songName {
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    
+}
+
+.songItem .songNS .songSinger{
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.songItem .timestamp {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+  
+.songItem .songItemPlay {
+    visibility: hidden;
+    
+}
+
+.songItem:hover .songItemPlay{
+    visibility: visible;
+    position: relative;
+    bottom: 50px;
+    left: 130px;
+    font-size: 40px;
+    color: #40cde8;
+}
+
+
+
