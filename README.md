@@ -24,3 +24,6 @@ Hopify is built using the following technologies:
 The Hopify music player website is hosted on Netlify, a popular cloud platform that provides easy and reliable deployment and hosting solutions.
 
 [Click](https://suraj052musicplayer.netlify.app/) to enjoy the immersive music listening experience provided by Hopify - your ultimate music player destination!
+
+![image](https://github.com/Suraj052/Hopify/assets/78478151/6800b94a-354e-425b-9e0f-607818d570dc)
+
